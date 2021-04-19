@@ -10,12 +10,12 @@ class Profile extends React.Component {
         }
     }
     
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log(this.props.currentUser.id)
         this.props.fetchUserTweets(this.props.currentUser.id);
     }
 
-    componentWillReceiveProps(newState) {
+    UNSAFE_componentWillReceiveProps(newState) {
         this.setState({ tweets: newState.tweets });
     }   
     
